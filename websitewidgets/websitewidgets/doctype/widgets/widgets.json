@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "autoname": "field:title",
+ "creation": "2018-04-19 16:17:14.455118",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "active",
+  "display_order",
+  "type",
+  "reference",
+  "widget_data"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "display_order",
+   "fieldtype": "Data",
+   "label": "Display Order"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Static\nDynamic"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Select",
+   "label": "Reference",
+   "options": "Events\nNews\nMembership\nSponsorship"
+  },
+  {
+   "depends_on": "eval:doc.type=='Static'",
+   "fieldname": "widget_data",
+   "fieldtype": "Table",
+   "label": "Widget Data",
+   "options": "Widget Data"
+  }
+ ],
+ "links": [],
+ "modified": "2024-07-09 01:55:15.165429",
+ "modified_by": "Administrator",
+ "module": "Websitewidgets",
+ "name": "Widgets",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "title",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1
+}
